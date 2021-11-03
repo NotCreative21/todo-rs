@@ -54,7 +54,7 @@ fn main() {
 
         split_content.remove((x-1) as usize);
  
-        let new_todo:Vec<String> = vec![split_content.into_iter().collect()];
+        let new_todo:Vec<String> = vec![split_content.join("\n")];
 
         fwrite(&file, new_todo);
         print_todo(&file);
